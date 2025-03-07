@@ -57,7 +57,7 @@ public class Main {
 
         System.out.println("Pilihan Kategori");
 
-        Kategori_list[] kategoruList = Kategori_list.values();
+        Kategori_list kategoruList[] = Kategori_list.values();
         for(int i = 1; i < kategoruList.length; i++){
             System.out.println(i+" "+kategoruList[i]);
         }
