@@ -48,12 +48,37 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("Masukkan judul: ");
-        String judul = scan.nextLine();
-        System.out.print("Masukkan pengarang: ");
-        String pengarang = scan.nextLine();
-        System.out.print("Masukkan harga: ");
-        double harga = scan.nextDouble();
+        String judul;
+        do {
+            System.out.print("Masukkan judul: ");
+            judul = scan.nextLine();
+
+            if(judul.matches(".*[0-9].*")){
+                System.out.println("harus huruf");
+            }
+        } while (judul.matches(".*[0-9].*"));
+
+        String pengarang;
+        do {
+            System.out.print("Masukkan pengarang: ");
+            pengarang = scan.nextLine();
+
+            if(pengarang.matches(".*[0-9].*")){
+                System.out.println("harus huruf");
+            }
+        } while (pengarang.matches(".*[0-9].*"));
+
+        double harga;
+        do {
+            System.out.print("Masukkan harga: ");
+            harga = scan.nextDouble();
+
+            if(harga < 0){
+                System.out.println("harus positif");
+            }
+        } while (harga < 0);
+        
+        
 
         System.out.println("Pilihan Kategori");
 
